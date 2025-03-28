@@ -1,6 +1,6 @@
 function [q, v, a, j, t, T] = CubicTrajectory(q0, delta_q_or_qf, varargin)
     % Input:
-    % - q0: posizione iniziale (SE NON LA HAI METTI SIMBOLICA!!!)
+    % - q0: posizione iniziale (SE NON LA HAI METTI SIMBOLICA (idem per delta)!!!)
     % - delta_q_or_qf: delta_q (se 'normalized') o qf (altrimenti)
 
     % Parametri aggiuntivi:
@@ -13,10 +13,6 @@ function [q, v, a, j, t, T] = CubicTrajectory(q0, delta_q_or_qf, varargin)
     % -q= q(t)
     % -a= qdot(t)
     % -v= qdotdot(t)
-
-   %RICORDA!!! 
-   %Se delta positivo allora output 'a' e 'v' positivi, negativi
-   %altrimenti;
 
     % --- Parsing degli input ---
     normalized = any(strcmpi(varargin, 'normalized'));
