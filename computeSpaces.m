@@ -16,7 +16,7 @@ disp(R);
 %range_space = J(:, pivots);
 
 
-%
+%range_space
 range_space = orth(J);
 %compl.
 null(transpose(J1))

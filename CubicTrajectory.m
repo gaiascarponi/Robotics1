@@ -1,18 +1,29 @@
 function [q, v, a, j, t, T] = CubicTrajectory(q0, delta_q_or_qf, varargin)
-    % Input:
+    % qi(t)= ....
+
+    % Input:   
     % - q0: posizione iniziale (SE NON LA HAI METTI SIMBOLICA (idem per delta)!!!)
     % - delta_q_or_qf: delta_q (se 'normalized') o qf (altrimenti)
 
     % Parametri aggiuntivi:
     %   * 'normalized': attiva la modalità doubly normalized
     %   * 'T': tempo finale
-    %   * 'velocity', V: vincolo di velocità
-    %   * 'acceleration', A: vincolo di accelerazione
 
     % Output:
     % -q= q(t)
     % -a= qdot(t)
     % -v= qdotdot(t)
+
+    % Come fare se VINCOLI (V | A)   ///  NB= T/2=0.5  ///
+    %   * 'max velocity', V: vincolo di velocità --> subs(v, ['tau'], [0.5])
+    %                                            supponi quindi che il
+    %                                            massimo della velocità lo
+    %                                            raggiunga al 50% del
+    %                                            tempo
+    %   * 'acceleration', A: vincolo di accelerazione --> subs(a, ['tau'], [T/2])
+    %                                            supponi che quando
+    %                                            accelerazione 0 allora
+    %                                            massima velocità
 
     % --- Parsing degli input ---
     normalized = any(strcmpi(varargin, 'normalized'));

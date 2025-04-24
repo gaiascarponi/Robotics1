@@ -1,7 +1,10 @@
 function[T]=T_phi_EULER(axes,angles)
-% given a sequence of rotations (EULER!!!) and their corresponding 
+% given a sequence of rotations (EULER!) and their corresponding 
 % angles, this function computes the matrix T(Φ) needed to the computation 
 % of ω, through :    ω = T(Φ)*Φ_dot
+%ATTENTION! If you are looking for ω remember that  Φ_dot=(alpha_dot,
+%beta_dot, gamma_dot) and ω is in the initial configuration. If you want
+%the rotated one you have to moltiplicate R_traspose(simple euler)*ω
 
 % initialize variables
 T=[];

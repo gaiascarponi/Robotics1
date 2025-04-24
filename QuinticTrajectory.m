@@ -12,7 +12,7 @@ function [q, v, a, j, s, t, T] = QuinticTrajectory(q0, delta_q_or_qf, varargin)
 
     % Output:
     % - q: position trajectory q(t)
-    % - v: velocity trajectory qdot(t)
+    % - v: velocity trajectory qdot(t)t
     % - a: acceleration trajectory qdotdot(t)
     % - j: jerk trajectory
     % - s: snap trajectory

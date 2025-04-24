@@ -1,7 +1,7 @@
 function[T]=T_phi_RPY(axes,angles)
 % given a sequence of rotations (RPY!!!) and their corresponding 
 % angles, this function computes the matrix T(Φ) needed to the computation 
-% of ω, through :    ω = T(Φ)*Φ_dot (phi_dot=(alpha_dot, beta_dot, gamma_dot))
+% of ω, through :    ω = T(Φ)*Φ_dot (phi_dot=[alpha_dot, beta_dot, gamma_dot])
 %subs(T_PHI,[beta gamma],[0 pi/2])
 
 % initialize variables
